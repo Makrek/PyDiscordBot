@@ -53,6 +53,9 @@ async def shutdown(ctx): #shutsdown bot
     await ctx.message.delete()
     print(getTime(), ctx.author, "used ;shutdown")
     if ctx.author.id == shizzle.fuhrer_id:
+        print('======================')
+        print('Bot is shutting down')
+        print('======================')
         await bot.logout()
     else:
         ctx.send('You dont have Authorization, pls contact Marek')
