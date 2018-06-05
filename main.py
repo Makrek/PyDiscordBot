@@ -27,7 +27,9 @@ async def on_ready():
 
 @bot.command()
 async def tits(ctx): #i dont fucking know to 
-    ctx.send('BIG FAT TITTIES AND VEGENE', tts=True)
+    await ctx.send('BIG FAT TITTIES AND VEGENE', tts=True, delete_after=0.1)
+
+
 @bot.command()
 async def delete(ctx, number=20): #deletes NUMBER amount of messages
     await ctx.message.delete()
@@ -56,8 +58,9 @@ async def shutdown(ctx): #shutsdown bot
     print(getTime(), ctx.author, "used ;shutdown")
     if ctx.author.id == shizzle.fuhrer_id:
         print('======================')
-        print('Bot is shutting down')
+        print('Bot is shutting down...')
         print('======================')
+        await ctx.send("Bot shutting down...")
         await bot.logout()
     else:
         ctx.send('You dont have Authorization, pls contact Marek')
