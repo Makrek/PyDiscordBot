@@ -1,4 +1,6 @@
 # TODO LIST
+-ALLES FIXEN
+-vuile kech scheer je weg
 -admin group
 -help command
 -admin help command
