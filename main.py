@@ -25,7 +25,9 @@ async def on_ready():
     channel = bot.get_channel(shizzle.bot_channel_id)
     await channel.send('Im back ni🅱️🅱️as', delete_after=5)
 
-
+@bot.command()
+async def tits(ctx): #i dont fucking know to 
+    ctx.send('BIG FAT TITTIES AND VEGENE', tts=True)
 @bot.command()
 async def delete(ctx, number=20): #deletes NUMBER amount of messages
     await ctx.message.delete()
