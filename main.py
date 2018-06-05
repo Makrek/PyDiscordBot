@@ -47,6 +47,19 @@ async def sourcecode(ctx): #sends the sourcecode
     else:
         ctx.send('You dont have Authorization, pls contact Marek')
 
+
+@bot.command()
+async def shutdown(ctx): #shutsdown bot
+    await ctx.message.delete()
+    print(getTime(), ctx.author, "used ;shutdown")
+    if ctx.author.id == shizzle.fuhrer_id:
+        await bot.logout()
+    else:
+        ctx.send('You dont have Authorization, pls contact Marek')
+
+
+
+
 @bot.event
 async def on_message(message): #check if message is from the bot itself
     if message.author.id == bot.user.id:
@@ -59,12 +72,16 @@ async def on_message(message): #check if message is from the bot itself
     await bot.process_commands(message)
 
 @bot.event
-async def on_message_delete(message):
+async def on_message_delete(message): #kijkt wat voor berichten mensen deleten [moet nog adden dat hij het niet bij het delete command doet]
     if message.author.id == bot.user.id:
         return
     else:
+        print('==============================')
+        print(message.author, 'Deleted:')
         print(getTime(), message.content)
+        print('==============================')
     
+
 @bot.command()
 async def uptime(ctx): #Shows how long the bot is online
     print(getTime(), ctx.author, "used ;uptime")
@@ -77,10 +94,16 @@ async def uptime(ctx): #Shows how long the bot is online
     seconds -= minutes * 60
 
     msg = 'The Bot is running'
-    if hours != 0:
+    if hours == 1:
+        msg+= " {} Hour,".format(hours)
+    elif hours != 0:
         msg+= " {} Hours,".format(hours)
-    if minutes != 0:
+    
+    if minutes == 1:
+        msg +=  " {} Minute,".format(minutes)
+    elif minutes != 0:
         msg +=  " {} Minutes,".format(minutes)
+    
     msg += " {} Seconds".format(int(seconds))
 
     await ctx.send(msg)
