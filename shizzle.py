@@ -1,4 +1,4 @@
-token='MjcwMjkyODc5MjgzNDUzOTYy.DfB6Mw.Ws1UOVrqJs81uMkqjj9ObNEElnI'
+
 fuhrer_id = 213970544083599374
 bot_channel_id  = 453633789726425112
 nl_scheldwoord_list = [
