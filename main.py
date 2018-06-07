@@ -60,7 +60,8 @@ async def shutdown(ctx): #shutsdown bot
         print('======================')
         print('Bot is shutting down...')
         print('======================')
-        await ctx.send("Bot shutting down...")
+        await ctx.send("Bot shutting down...", delete_after=3)
+        await asyncio.sleep(3)
         await bot.logout()
     else:
         ctx.send('You dont have Authorization, pls contact Marek')
