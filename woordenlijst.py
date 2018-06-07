@@ -1,7 +1,4 @@
-token = 'MjcwMjkyODc5MjgzNDUzOTYy.DfsG-g.5WQ5tMfgF5xLoClx7oYS976F3I8'
-fuhrer_id = 213970544083599374
-bot_channel_id  = 453633789726425112
-nl_scheldwoord_list = [
+lijst = [
 'zoetwatermosselaalskakker',
 'aambeienbeffer',
 'aambeienlikker',
@@ -229,4 +226,27 @@ nl_scheldwoord_list = [
 'autodidact',
 'autokraat',
 'avocadoneuker',
-'azteek']
+'azteek',
+'baanduivel',
+'baardaap',
+'baarmoeder',
+'baarmoederscheefgepoept-kuttekind',
+'baarmoederbuikwandschimmel',
+'baarmoeder-discokip',
+'baarmoederslijmvlieg',
+'baarvader',
+'babaloekoe',
+'babbalipviskikker',
+'baby',
+'babypoedersnuiver',
+'baccilledrager',
+'badaap',
+'badjufbeffer',
+'badmuts',
+'bafaap',
+'baffer',
+'bruinwerker',
+'bruisend',
+'test',
+'test2'
+]
