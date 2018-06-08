@@ -11,8 +11,8 @@ import woordenlijst
 # py "C:\PYTHON\Discord Makrek Bot\main.py"
 bot = commands.Bot(command_prefix=';')
 t1 = time.clock()
-#
-#
+
+
 @bot.event
 async def on_ready():
     print('--------------------------------------------------')
@@ -24,13 +24,15 @@ async def on_ready():
     await bot.change_presence(activity=discord.Activity(name='Met jou nichtje', type=discord.ActivityType.streaming))   
     channel = bot.get_channel(shizzle.bot_channel_id)
     await channel.send('Im back nibbas', delete_after=5)
-#
-#
+
+
+
 @bot.command()
 async def tits(ctx): #i dont fucking know to 
     await ctx.send('BIG FAT TITTIES AND VEGENE', tts=True, delete_after=0.1)
-#
-#
+
+
+
 @bot.command()
 async def delete(ctx, number=20): #deletes NUMBER amount of messages
     await ctx.message.delete()
@@ -41,8 +43,9 @@ async def delete(ctx, number=20): #deletes NUMBER amount of messages
         print(getTime(), 'Marek just used the delete command.')
     else:
         await ctx.send('Boi. You are not allowed to do this shiet, fricking get out of here smiecht!!', delete_after=10)
-#       
-#
+
+
+
 @bot.command()
 async def sourcecode(ctx): #sends the sourcecode
     await ctx.message.delete()
@@ -51,8 +54,9 @@ async def sourcecode(ctx): #sends the sourcecode
         await ctx.send(file=discord.File(r"C:\PYTHON\Discord Makrek Bot\main.py"), delete_after=60)
     else:
         ctx.send('You dont have Authorization, please contact an Administator')
-#
-#
+
+
+        
 @bot.command()
 async def shutdown(ctx): #shutsdown bot
     await ctx.message.delete()
@@ -66,8 +70,9 @@ async def shutdown(ctx): #shutsdown bot
         await bot.logout()
     else:
         ctx.send('You dont have Authorization, please contact an Administator')
-#
-#
+
+
+
 @bot.command()
 async def list(ctx, option, *, message): #Add or Remove a word to the list
     if ctx.author.id != shizzle.fuhrer_id: #Checks if its me
@@ -82,8 +87,9 @@ async def list(ctx, option, *, message): #Add or Remove a word to the list
     else: #If all failed tell me 
         print(getTime(), 'Tried to use ;list but something went wrong')
         await ctx.channel.send('Something went wrong')
-#
-#
+
+
+
 @bot.event
 async def on_message(message): #Trigger all of this if there is sent a message
     if message.author.id == bot.user.id: #Check if the message came from the bot itself
@@ -92,8 +98,9 @@ async def on_message(message): #Trigger all of this if there is sent a message
         await message.channel.send(content=("Tinko is een " + random.choice(woordenlijst.lijst)))
         print(getTime(), message.author, "said 'tinko' I responded :)")
     await bot.process_commands(message) #Overide on_message so the commands still trigger
-#
-#
+
+
+
 '''
 @bot.event
 async def on_message_delete(message): #kijkt wat voor berichten mensen deleten [moet nog adden dat hij het niet bij het delete command doet]
@@ -105,8 +112,9 @@ async def on_message_delete(message): #kijkt wat voor berichten mensen deleten [
         print(getTime(), message.content)
         print('==============================')
 '''
-#   
-#
+
+
+
 @bot.command()
 async def uptime(ctx): #Shows how long the bot is online
     print(getTime(), ctx.author, "used ;uptime")
@@ -132,6 +140,5 @@ async def uptime(ctx): #Shows how long the bot is online
     msg += " {} Seconds".format(int(seconds))
 
     await ctx.send(msg)
-#
-#
+
 bot.run(shizzle.token)
