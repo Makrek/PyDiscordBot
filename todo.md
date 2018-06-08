@@ -10,3 +10,4 @@
 -file system
 -remind me command
 -list command afmaken / fixen
+-error afhandeling
