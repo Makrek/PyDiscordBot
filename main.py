@@ -23,7 +23,7 @@ async def on_ready():
     print('--------------------------------------------------')
     await bot.change_presence(activity=discord.Activity(name='Met jou nichtje', type=discord.ActivityType.streaming))   
     channel = bot.get_channel(shizzle.bot_channel_id)
-    await channel.send('Im back ni🅱️🅱️as', delete_after=5)
+    await channel.send('Im back nibbas', delete_after=5)
 #
 #
 @bot.command()
